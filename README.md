@@ -14,3 +14,5 @@ https://lernantino.github.io.run-buddy/
 
 ## Contribution
 Made with Love by Mike Perozo
+
+### © 2019 RUN BUDDY, INC
