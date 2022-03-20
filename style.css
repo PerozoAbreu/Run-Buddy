@@ -13,6 +13,15 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("./images/hero-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 header nav {
@@ -31,6 +40,14 @@ header nav ul li a {
     margin: 10 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 
@@ -39,6 +56,7 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -89,42 +107,41 @@ footer a {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
+    background-position: 80%;
     
 }
 
 .hero-form {
     background-color: #fce138;
+    border: solid 3px #024e76;
+    border-radius: 15px;
     padding: 20px;
     width: 500px;
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
-.hero-form {
-    
-    border: solid 3px #024e76;
-     }
-
-
-.hero-form {
-    border: 3px solid #024e76;
-    background-color: #fce138;
-    padding: 20px;
-    color: #024e76;
-
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
-  .hero-form h3 {
+
+.hero-form h3 {
     font-size: 24px;
     margin: 0;
 }
 
-  .hero-form p {
-      margin: 5px 0 15px 0;                 
+.hero-form p {
+      margin: 5px 0 15px 0;  
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);               
   }
 
-  .form-input {
+.form-input {
     border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
@@ -132,6 +149,13 @@ footer a {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
   .hero-form label {
@@ -144,6 +168,7 @@ footer a {
       border: none;
       padding: 10px 20px;
       font-size: 16px;
+      border-radius: 10px;
   }
 
   .hero-cta {
@@ -159,14 +184,12 @@ footer a {
       font-style: italic;
       font-size: 55px;
       color: #fce138;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
   }
 /* Hero Style End */
 
-
-
-
-
-  .intro p {
+ .intro p {
       line-height: 2.0;
       color: #39a6b2;
       width: 80%;
@@ -203,11 +226,19 @@ footer a {
         margin: 50px auto;
         padding-bottom: 50px;
         width: 80%;
-        border-bottom: 1px solid #39a6b2;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid #39a6b2;
+      }
+
+      .step:last-child {
+          border-bottom: none;
+      }
+
+      .step:nth-children(even) {
+          border-bottom: 1px solid #39a6b2;
       }
 
       .step-info {
@@ -350,10 +381,17 @@ footer a {
         display: block;
         padding: 7px 15px;
         font-size: 16px;
-        color: #024e76;
+        color: white;
         width: 100%;
         margin-bottom: 15px;
         margin-top: 5px;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        background-color: rgba(255,255,255, 1);
+        outlind: none;
     }
 
     .contact-form button {
@@ -364,6 +402,12 @@ footer a {
         text-align: center;
         padding: 15px 0;
         font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .contact-form button:hover {
+        color: #fce138;
+        background: #39a6b2;
     }
 
     .contact-info a {
@@ -386,6 +430,7 @@ footer a {
           header h1 {
             width: 100%;
             text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           }
         
           header nav ul {
@@ -396,6 +441,8 @@ footer a {
         
           header nav ul li a {
             font-size: 20px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
           }
         
           footer h2, footer div {
@@ -426,9 +473,10 @@ footer a {
         
 
     /* MEDIA QUERY FOR TABLETS AND SMALLER */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 980px) {
         section {
             padding: 30px 15;
+            position: relative;
         }
 
         @media screen and (max-width: 768px) {
